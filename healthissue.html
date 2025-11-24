@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Health Issues | Maitri</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background-color: #f7f8fa;
+      display: flex;
+      color: #333;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 220px;
+      background: #ffffff;
+      height: 100vh;
+      border-right: 1px solid #ddd;
+      padding: 20px;
+      position: fixed;
+    }
+
+    .sidebar h2 {
+      font-size: 18px;
+      margin-bottom: 20px;
+      text-align: center;
+      color: #2d3748;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar li {
+      padding: 10px 0;
+      cursor: pointer;
+      color: #555;
+      font-size: 15px;
+    }
+
+    .sidebar li:hover {
+      color: #007bff;
+    }
+
+    /* Main Content */
+    .main {
+      margin-left: 240px;
+      padding: 20px;
+      width: calc(100% - 240px);
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    header h1 {
+      font-size: 22px;
+    }
+
+    .report-btn {
+      background: #000;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .search-area {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .search-area input, .search-area select {
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      flex: 1;
+    }
+
+    /* Cards */
+    .card {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .card p {
+      color: #666;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .tags {
+      display: flex;
+      gap: 10px;
+      font-size: 13px;
+    }
+
+    .tag {
+      background: #e5e7eb;
+      padding: 3px 8px;
+      border-radius: 4px;
+    }
+
+    .priority {
+      font-weight: bold;
+      color: #fff;
+      border-radius: 5px;
+      padding: 2px 8px;
+      font-size: 12px;
+    }
+
+    .Critical {
+      background: #dc2626;
+    }
+    .Medium {
+      background: #f59e0b;
+    }
+    .Low {
+      background: #16a34a;
+    }
+
+    footer {
+      text-align: center;
+      color: gray;
+      font-size: 13px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <a href="index.html">
+    <h2><img src="maitrilogo.png" alt="Logo" height="140px"></h2>
+    </a>
+    <ul>
+      <li><a href="dashboard.html">🏠 Dashboard</a></li>
+      <li>🩺 Health Issues</li>
+      <li>💬 Consultations</li>
+      <li>🎥 Webinars</li>
+      <li>💡 Daily Tips</li>
+      <li>🚨 Emergency Chat</li>
+    </ul>
+  </div>
+
+  <!-- Main Area -->
+  <div class="main">
+    <header>
+      <h1>Health Issues</h1>
+      <a href="Health.html">
+      <button class="report-btn" onclick="reportIssue()">+ Report New Issue</button>
+      </a>
+    </header>
+
+    <div class="search-area">
+      <input type="text" id="search" placeholder="Search symptoms, conditions, or keywords...">
+      <select id="category">
+        <option>All Categories</option>
+        <option>Cardiovascular</option>
+        <option>Neurological</option>
+        <option>Respiratory</option>
+      </select>
+      <select id="priority">
+        <option>All Priorities</option>
+        <option>Critical</option>
+        <option>Medium</option>
+        <option>Low</option>
+      </select>
+    </div>
+
+    <div id="issues">
+      <div class="card" data-priority="Critical" data-category="Cardiovascular">
+        <span class="priority Critical">Critical</span>
+        <h3>Severe chest pain and shortness of breath</h3>
+        <p>Experiencing sharp pain that radiates to the left arm with difficulty breathing.</p>
+        <div class="tags">
+          <span class="tag">Cardiovascular</span>
+          <span class="tag">Status: Under Review</span>
+          <span class="tag">Dr. Johnson assigned</span>
+        </div>
+      </div>
+
+      <div class="card" data-priority="Medium" data-category="Neurological">
+        <span class="priority Medium">Medium</span>
+        <h3>Persistent headache with nausea</h3>
+        <p>Recurring headaches for the past week, especially in the morning with mild nausea.</p>
+        <div class="tags">
+          <span class="tag">Neurological</span>
+          <span class="tag">Status: Analyzed</span>
+          <span class="tag">Consultation scheduled</span>
+        </div>
+      </div>
+
+      <div class="card" data-priority="Low" data-category="Respiratory">
+        <span class="priority Low">Low</span>
+        <h3>Seasonal allergy symptoms</h3>
+        <p>Sneezing, runny nose, and itchy eyes during spring season.</p>
+        <div class="tags">
+          <span class="tag">Respiratory</span>
+          <span class="tag">Status: Resolved</span>
+          <span class="tag">Treatment completed</span>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>© 2025 Maitri. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script>
+    // Simple search and filter function
+    document.getElementById("search").addEventListener("input", filterIssues);
+    document.getElementById("category").addEventListener("change", filterIssues);
+    document.getElementById("priority").addEventListener("change", filterIssues);
+
+    function filterIssues() {
+      const search = document.getElementById("search").value.toLowerCase();
+      const category = document.getElementById("category").value;
+      const priority = document.getElementById("priority").value;
+      const cards = document.querySelectorAll(".card");
+
+      cards.forEach(card => {
+        const title = card.querySelector("h3").innerText.toLowerCase();
+        const cardCategory = card.getAttribute("data-category");
+        const cardPriority = card.getAttribute("data-priority");
+
+        if (
+          (title.includes(search)) &&
+          (category === "All Categories" || cardCategory === category) &&
+          (priority === "All Priorities" || cardPriority === priority)
+        ) {
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    }
+
+    // Simple JS alert for Report Button
+    function reportIssue() {
+      alert("🩺 Redirecting to report new health issue form...");
+    }
+  </script>
+</body>
+</html>

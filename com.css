@@ -1,0 +1,11 @@
+body{
+   background: linear-gradient(45deg,rgb(243, 147, 147),rgba(72, 70, 70, 0.87));
+   height:100vh;
+}
+marquee{
+   color:rgb(64, 21, 21);
+}
+h1{
+   font-size: 6rem;
+   text-decoration: underline;
+}

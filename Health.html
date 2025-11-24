@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HealthCare Portal</title>
+<link rel="stylesheet" href="style4.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=help_clinic" />
+</head>
+<body>
+<div class="container">
+<div class="header">
+<a href="#" onclick="location.reload()"><h1><b>HealthCare Portal</b></h1></a>
+</div>
+<div class="page-header">
+  <div>
+    <h2>Report New Health Issue</h2>
+    <p>Submit a Detailed Report of Your Health Concern for professional analysis</p>
+  </div>
+  <button type="button" class="back-to-dashboard"><a class="link" href="dashboard.html">Back to Dashboard </a></button>
+</div>
+<div class="form-container">
+  <form>
+    <div class="form-group-row">
+      <div class="form-group">
+        <label for="issue-category">Issue Category</label>
+        <select id="issue-category">
+          <option value="">Select category</option>
+          <option value="option1">Option 1</option>
+          <option value="option2">Option 2</option>
+          <option value="option3">Option 3</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="urgency-level">Urgency Level</label>
+        <select id="urgency-level">
+          <option value="">Select urgency</option>
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="issue-title">Issue Title</label>
+      <input type="text" id="issue-title" placeholder="Brief description of your health concern">
+    </div>
+    <div class="form-group">
+      <label for="detailed-description">Detailed Description</label>
+      <textarea id="detailed-description" rows="9" placeholder="Please provide detailed information about your symptoms, when they started, severity, and any relevant medical history..."></textarea>
+    </div>
+    <div class="form-group-row">
+      <div class="form-group">
+        <label for="duration">Duration</label>
+        <select id="duration">
+          <option value="">How long have you experienced this?</option>
+          <option value="less-than-a-week">Less than a week</option>
+          <option value="1-4-weeks">1-4 weeks</option>
+          <option value="more-than-a-month">More than a month</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="previous-medical-history">Previous Medical History</label>
+        <select id="previous-medical-history">
+          <option value="">Select if applicable</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="current-medications">Current Medications</label>
+      <textarea id="current-medications" rows="9" placeholder="List any medications, supplements, or treatments you are currently taking..."></textarea>
+    </div>
+    <div class="form-group">
+      <label for="attachments">Attach Files (Optional)</label>
+      <input type="file" id="attachments" multiple>
+    </div>
+    <div class="form-group">
+      <div class="contact-preferences">
+        <h3>Contact Preferences</h3>
+        <div>
+          <input type="checkbox" id="email-notifications" name="contact-preferences[]">
+          <label for="email-notifications">Email notifications for updates</label>
+        </div>
+        <div>
+          <input type="checkbox" id="sms-alerts" name="contact-preferences[]">
+          <label for="sms-alerts">SMS alerts for urgent responses</label>
+        </div>
+        <div>
+          <input type="checkbox" id="request-consultation" name="contact-preferences[]">
+          <label for="request-consultation">Request consultation with specialist</label>
+        </div>
+      </div>
+    </div>
+    <div class="buttons">
+      <button type="submit" class="submit-button">Submit Report</button>
+      <button type="button"  id="save-draft-button" onclick="saveDraft()">Save Draft</button>
+      <p id="note_">**Your report will be reviewed by our medical team within 24 hours.</p>
+    </div>
+  </form>
+</div>
+ <div class="need_help" class="help">
+  <span class="material-symbols-outlined"></span>
+  <div id="help_icon" class="help"><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 0 24 24" width="15px"  style = "margin-top:10px;"       fill="#1f1f1f"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/></svg></div>
+  <div id="need" class="help"><b><p>Need Help?</p></b></div>
+  <div class="mess"><p>If you're exeperiencing a medical emergency,please call immediately.</p></div>
+  <div class="contact"><a href="com.html"><p>Emergency Contacts</p></a></div>
+  <div class="contact"><a href="com.html"><p>Help Center</p></a></div>
+  <div class="contact"><a href="com.html"><p>Live Chat Support</p></a></div>
+ </div>
+</div>
+<script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="./style3.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="top_header">
+            <div class="healthcare-dashboard">
+                <a href="index.html">
+                <img src="maitrilogo.png" class="logo" />
+                </a>
+                <h2>Welcome to Dashboard </h2>
+            </div>
+
+            <div class="header_right">
+                <span class="bell-icon" aria-label="Notifications">&#128276;</span>
+                <img src="./AVATAR.jpeg" alt="User Avatar" class="avatar" />
+            </div>
+        </header>
+        <nav class="sidebar" aria-label="Primary Navigation">
+            <a href="#" class="active" aria-current="page">
+                <img src="./DASH.png" alt="dash" class="nav-icon" /> <b>Dashboard</b>
+            </a>
+            <a href="healthissue.html">
+                <img src="./HEALTH 1.png" alt="Health_issues" class="nav-icon" /> <b>Health Issues</b>
+            </a>
+            <a href="#">
+                <img src="./CONSULT.png" alt="consult" class="nav-icon" /> <b>Consultations</b>
+            </a>
+            <a href="#">
+                <img src="./WEBINAR.jpg" alt="webinar" class="nav-icon" /> <b>Webinars & Camps</b>
+            </a>
+            <a href="#">
+                <img src="./TIPS.avif" alt="daily" class="nav-icon" /> <b>Daily Tips</b>
+            </a>
+            <a href="#">
+                <img src="./MESSAGE.jpeg" alt="message" class="nav-icon" /> <b>Messages</b>
+            </a>
+        </nav>
+
+        <main class="content">
+            <section class="short_dash" aria-label="Key Statistics">
+                <div class="dash_box">
+                    <div class="label">Health Issues</div>
+                    <div>1,248</div>
+                </div>
+                <div class="dash_box">
+                    <div class="label">Consultations</div>
+                    <div>324</div>
+                </div>
+                <div class="dash_box">
+                    <div class="label">Webinars & Camps</div>
+                    <div>1,012</div>
+                </div>
+                <div class="dash_box">
+                    <div class="label">Daily Tips</div>
+                    <div>10</div>
+                </div>
+            </section>
+
+            <section class="dashboard_row" aria-label="Recent Health Issues and Daily Health Tip">
+                <article class="recent_health_issues" aria-labelledby="recent_health_issues_header">
+                    <header id="recent_health_issues_header">
+                        Recent Health Issues
+                        <span class="view_all" role="button" tabindex="0"
+                            aria-label="View all recent health issues">View All</span>
+                    </header>
+                    <div class="issues_list">
+                        <div class="issue_item" tabindex="0" aria-label=" ">
+                            <div class="issue_info">
+                                <strong>High Blood Pressure</strong>
+                                <small>Reported 2 hours ago</small>
+                            </div>
+                            <div class="issue_severity critical ">Critical</div>
+                        </div>
+                        <div class="issue_item" tabindex="0" aria-label=" ">
+                            <div class="issue_info">
+                                <strong>Chronic Fatigue</strong>
+                                <small>Reported 5 hours ago</small>
+                            </div>
+                            <div class="issue_severity moderate">Moderate</div>
+                        </div>
+                        <div class="issue_item" tabindex="0" aria-label=" ">
+                            <div class="issue_info">
+                                <strong>Sleep Disorder</strong>
+                                <small>Reported 1 day ago</small>
+                            </div>
+                            <div class="issue_severity low">Low</div>
+                        </div>
+                    </div>
+                </article>
+
+                <aside class="daily_tip" aria-labelledby="daily_tip_header">
+                    <header id="daily_tip_header">
+                        <strong>Daily Health Tip</strong>
+                    </header>
+                    <div class="tip_image" aria-label="Image representing health tip">[Health Tip Image]</div>
+                    <p>Stay hydrated by drinking at least 8 glasses of water daily to maintain proper hydration and
+                        support overall health.</p>
+                    <button class="btn_primary" type="button">View More Tips</button>
+                </aside>
+
+                <article class="webinar_camp">
+                    <header id="health_webinar_header">
+                        <strong>Health Webinars & Camps</strong>
+                        <a href="#" class="view_all">View All</a>
+                    </header>
+
+                    <div class="card">
+                        <div class="preview">Webinar Preview</div>
+                        <div class="title">Mental Health Awareness</div>
+                        <div class="datetime">Jan 25, 2025 • 3:00 PM</div>
+                        <button class="btn_register" type="button">Register</button>
+                    </div>
+
+                    <div class="card">
+                        <div class="preview">Camp Preview</div>
+                        <div class="title">Free Health Checkup Camp</div>
+                        <div class="datetime">Jan 28, 2025 • 9:00 AM</div>
+                        <button class="btn_learn_more">Learn More</button>
+                    </div>
+                </article>
+
+            </section>
+
+            <section class="critical_messages" aria-label="Critical Messages">
+                <header>
+                    Critical Messages
+                    <span class="view_all" role="button" tabindex="0" aria-label="View all critical messages">View All
+                        Messages</span>
+                </header>
+                <div class="critical_message" tabindex="0">
+                    <div class="icon" aria-hidden="true">⚠️</div>
+                    <div class="text">
+                        Emergency Aleart
+                        <small>Your blood pressure reading is critically high.Please contact your doctor
+                            immediately.</small>
+                        <small>1 mins ago</small>
+                    </div>
+                    <div class="close_btn" role="button" tabindex="0" aria-label="Dismiss message">×</div>
+                </div>
+                <div class="critical_message" tabindex="0">
+                    <div class="icon_clock" aria-hidden="true"> 🕒 </div>
+                    <div class="text">
+                        Medication Reminder
+                        <small>Don't forget to take your evening medication in 30 minutes.</small>
+                        <small>30 mins ago</small>
+                    </div>
+                    <div class="close_btn" role="button" tabindex="0" aria-label="Dismiss message">×</div>
+                </div>
+            </section>
+        </main>
+
+    </div>
+
+
+</body>
+
+</html>
